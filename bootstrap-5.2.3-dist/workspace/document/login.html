@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Login in</title>
+    <link href="/bootstrap-5.2.3-dist/workspace/public/login.css" rel="stylesheet">
+    <link href="/bootstrap-5.2.3-dist/workspace/public/login_modal.css" rel="stylesheet">
+</head>
+<body>
+    <div class="Main_Container" id="Main">
+        <div class="Login_Container">
+            <!-- 로그인 폼 -->
+            <h2>Welcome Back</h2>
+            <form id="LoginForm">
+                <div class="input-group">
+                    <label for="username">
+                        <img src="/bootstrap-5.2.3-dist/workspace/assets/login_design_group/id_icon.webp" alt="Email Icon">
+                    </label>
+                    <input type="text" id="username" placeholder="Email ID" required>
+                </div>
+                <div class="input-group">
+                    <label for="userpw">
+                        <img src="/bootstrap-5.2.3-dist/workspace/assets/login_design_group/pw_icon.webp" alt="Password Icon">
+                    </label>
+                    <input type="password" id="userpw" placeholder="Password" required>
+                </div>
+                <button type="submit" class="login-btn">Sign In</button>
+            </form>
+
+            <!-- 소셜 로그인 -->
+            <div class="social-login">
+                <p>Or Sign in with</p>
+                <div class="social-icons">
+                    <img src="/bootstrap-5.2.3-dist/workspace/assets/login_design_group/google_icon.png" alt="Google" class="social-icon">
+                    <img src="/bootstrap-5.2.3-dist/workspace/assets/kakao-logo.png" alt="Kakao" class="social-icon">
+                    <img src="/bootstrap-5.2.3-dist/workspace/assets/login_design_group/naver_icon.png" alt="Naver" class="social-icon">
+                    <img src="/bootstrap-5.2.3-dist/workspace/assets/x-logo.png" alt="X" class="social-icon">
+                </div>
+            </div>
+
+            <!-- Sign-Up 링크 -->
+            <div class="signup-link">
+                <p>New? <a href="#" id="SignUpLink">Sign-Up Here!</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 회원가입 모달 -->
+    <div id="SignUpModal" class="hidden">
+        <div class="modal-content">
+            <h2>Create an Account</h2>
+            <form id="SignUpForm">
+                <div class="input-group">
+                    <label for="signup-username">
+                        <img src="/bootstrap-5.2.3-dist/workspace/assets/id_icon.webp" alt="Email Icon">
+                    </label>
+                    <input type="text" id="signup-username" placeholder="Email ID" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-password">
+                        <img src="/bootstrap-5.2.3-dist/workspace/assets/password-icon.png" alt="Password Icon">
+                    </label>
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="signup-btn">Sign Up</button>
+            </form>
+            <button id="CloseSignUpModal" class="close-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="/bootstrap-5.2.3-dist/workspace/event/login.js"></script>
+    <script src="/bootstrap-5.2.3-dist/workspace/event/login_modal.js"></script>
+</body>
+</html>
