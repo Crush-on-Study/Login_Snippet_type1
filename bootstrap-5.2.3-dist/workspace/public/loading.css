@@ -1,0 +1,43 @@
+/* 전체 화면 배경 */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #1e1e2f; /* 배경 색상 */
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* 로딩 박스 */
+.loading-box {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Progress Bar 스타일 */
+.progress-bar {
+    width: 200px;
+    height: 10px;
+    background: #444;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background: #6200ea;
+    transition: width 3s linear;
+}
+
+/* 로딩 메시지 스타일 */
+#loading-text {
+    font-size: 16px;
+    font-weight: bold;
+}
