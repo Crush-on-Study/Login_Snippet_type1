@@ -14,34 +14,76 @@
     transition: visibility 0.3s, opacity 0.3s;
 }
 
+/* 모달창이 활성화될 때 */
 #SignUpModal.show {
     visibility: visible;
     opacity: 1;
 }
 
+/* 기본적으로 hidden 상태 */
+.hidden {
+    display: none;
+}
+
+/* 모달 내용 */
 .modal-content {
     background: white;
     padding: 30px;
     border-radius: 10px;
-    width: 300px;
+    width: 350px;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-.modal-content h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: bold;
+/* 입력 필드 스타일 */
+.input-group {
+    display: flex;
+    color: #333;
+    align-items: center;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.input-group input {
+    border: none;
+    background: none;
+    outline: none;
+    color: #333;
+    flex-grow: 1;
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+/* 성별 선택 스타일 */
+.gender-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
     color: #333;
 }
 
+/* 약관 동의 체크박스 */
+.terms-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* 버튼 스타일 */
 .signup-btn {
     width: 100%;
     padding: 10px;
     border: none;
     border-radius: 5px;
     background-color: #03dac6;
-    color: white;
+    color: #333;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
@@ -64,8 +106,4 @@
 
 .close-btn:hover {
     background-color: #3700b3;
-}
-
-.hidden {
-    display: none;
 }
